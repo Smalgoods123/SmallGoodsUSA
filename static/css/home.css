@@ -1,0 +1,576 @@
+/*global variable*/
+@font-face{
+    font-family: Avenir;
+    src: url('../fonts/Avenir.ttc');
+}
+
+/*ALBERT START*/
+@font-face {
+    font-family: 'Avenir Next';
+    src: url('fonts/Avenir Next.ttc');
+  }
+  
+  @font-face {
+    font-family: 'Avenir Next Condensed';
+    src: url('fonts/Avenir Next Condensed.ttc');
+  }
+/*ALBERT END*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 87px;
+}
+
+h2 {
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 44px;
+    letter-spacing: 0.04em;
+}
+
+h3 {
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 26px;
+    line-height: 36px;
+    text-align: center;
+    letter-spacing: 0.04em;
+}
+
+h4 {
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 33px;
+}
+
+p {
+    font-family: 'Avenir';
+    font-size: 26px;
+    line-height: 36px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: #89A593;
+}
+
+ul {
+    list-style: none;
+}
+
+/*ALBERT START*/
+.mast{
+    display: inline-flex;
+    /* padding: 5em; */
+    color: white;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+    transform: scale(0.75);
+    height: 90%
+    /* overflow: hidden; */
+  }
+  
+  .photo_left{
+    /* flex-basis: 20%;
+    flex-direction: column;
+    align-items:flex-end;
+    justify-content: flex-end; */
+    display: grid;
+    grid-template-rows: 0.1fr 0.2fr;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .img1{
+    align-self: flex-end;
+    /* max-width: 100%;
+    height: auto; */
+  }
+  
+  .img2{
+    object-fit: cover;
+    max-width: 300%;
+    max-height: 500%;
+  }
+  
+  .img3{
+    max-width:100%;
+    max-height:90%;
+    display:block;
+  }
+  
+  .photo_mid{
+    flex-basis: 60%;
+  }
+  
+  .mid_top{
+    display: flex;
+  }
+  
+  .logo{
+    height: 120px;
+    align-self: center;
+    padding-left: 0px;
+    padding-right: 175px;
+  }
+  
+  .text{
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  
+  .text1, .text2{
+    align-self: center;
+    margin: 18px;
+    padding-bottom: 10px;
+    max-width:100%;
+  }
+  
+  .mid_mid{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0px;
+  }
+  
+  .button1, .button2{
+    height: 85px;
+    padding-bottom: 50px;
+    max-width:100%;
+  }
+  
+  .mid_bot{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .img3{
+    padding-top: 50px;
+    max-width: 100%;
+  }
+  
+  .photo_right{
+    display: flex;
+    flex-basis: 20%;
+    flex-direction: column;
+    margin: 0;
+    align-items:flex-start;
+    background-size: cover;
+  }
+  
+  .img5{
+    resize: 300%;
+    overflow: hidden;
+  }
+  
+  .learnaboutus_section{
+    display: flex;
+    flex-wrap: nowrap;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+    box-shadow: 0px -10px 100px rgba(0, 0, 0, 0.015);
+    transform: scale(0.7);
+    padding-top: -500px;
+  }
+  
+  .aboutus_left{
+    flex-basis: 10%;
+    justify-content: center;
+    align-items: center;
+    padding-right:350px;
+  }
+  
+  .img6{
+    max-width: 1000%;
+    height: auto;
+  }
+  
+  .aboutus_right{
+    flex-basis: 20%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 120px;
+  }
+  
+  .text3{
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+  }
+  
+  .button3{
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    padding-top: 10px;
+    padding-left: 80px;
+  }
+  
+  /* END OF HOME PAGE */
+  
+/*ALBERT END*/
+
+/*Navigation bar*/
+header li {
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 33px;
+
+    display: inline-block;
+    padding: 0px 0px;
+    
+    text-shadow: 0px 4.8px 4.8px rgba(0, 0, 0, 0.25);
+}
+
+#underline {
+    border-bottom: solid #89A593 3px;
+}
+
+.navHome {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 11.6%;
+    
+    
+
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.25);
+}
+
+nav img {
+    min-width: 23%;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #5E9370;
+}
+
+@media only screen and (max-width: 768px){
+    .hamburger{
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .navMenu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    
+
+    .navHome {
+        position: fixed;
+        left: -100%;
+        top: 100px;
+        gap: 0;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    
+
+    .navBar>li {
+        margin: 16px 0;
+    }
+
+    .navHome.active {
+        width: 214px;
+        height: 100%;
+        left: 75%;
+        top: 0px;
+    }
+
+    .navImg.active {
+        display: block;
+    }
+}
+
+
+
+
+/*where to find us section*/
+.whereToFindUs {
+    
+    /*margin-left: 7.5%;*/
+    margin: 128px;
+}
+
+/*structure includd physical store, store hour, open market and market popup*/
+.grid {
+    display: grid;
+    grid-template-columns: 53fr 47fr;
+    grid-template-rows: 4fr 2fr 4fr;
+    grid-column-gap: 7%;
+    grid-row-gap: 4.7%;
+    box-sizing: border-box;
+    
+    /*grid-auto-rows: auto;*/
+}
+
+@media only screen and (max-width: 768px) {
+    .grid {
+        display: flex;
+        flex-direction: column;
+    }
+    
+
+}
+
+.physicalStore {
+    /*margin-left: 130px;*/
+    grid-column: 1/2;
+    grid-row: 1/3;
+    /*width: 41%;*/
+    /*margin-right: 885px;*/
+   
+}
+
+.phyStore {
+    width: 100%;
+}
+
+.adress {
+    font-weight: 400;
+}
+
+.content {
+    font-weight: 500;
+    font-style: italic;
+}
+
+.storeHour {
+    /*margin-left: 800px;*/
+    box-sizing: border-box;
+    border: 5px solid #89A593;
+    border-radius: 6px;
+    grid-column: 2/3;
+    grid-row: 1/2;
+
+    margin-top: 4%;
+    padding-top: 6%;
+    padding-bottom: 4.5%;
+    
+    /*align-self: start;*/
+    /*width: 581px*/
+}
+
+/*.storeHour .flex {
+    display: flex;
+    justify-content:space-between;
+}*/
+
+/*text in store hour*/
+.store {
+    text-align: center;
+}
+
+.storeP {
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+    text-align: center;
+    letter-spacing: 0.04em;
+
+    padding-left: 10%;
+    padding-right: 5%;
+}
+
+.storeHour ul {
+    
+}
+
+.storewrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.workDay {
+   /*float: left;
+    width: 50%;*/
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 36px;
+}
+
+.workHour {
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 36px;
+}
+
+.openMkt {
+    /*margin-left: 130px;
+    width: 686px;*/
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+
+.mktPopUp {
+    /*margin-left: 956px;
+    width: 629.96px;*/
+    /*grid-column: ;
+    grid-row: 1/3;*/
+    /*padding-right: 140px;*/
+    grid-column: 2/3;
+    grid-row: 2/4;
+
+}
+
+.popUp {
+    width: 100%;
+}
+
+.instagram {
+
+}
+
+
+
+/*footer section*/
+footer {
+    
+    margin-top: 3em;
+}
+
+.footerLogo {
+    width: 38.9%;
+    float: left;
+}
+
+/*include linkks and icons*/
+.flexContainer {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+    
+}
+
+
+
+.connect {
+    text-align: center;
+}
+
+.connect li {
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+
+}
+
+.links {
+
+}
+
+.social {
+    display: grid;
+    grid-template-columns:repeat(5,2em);
+    
+}
+
+.UberEats {
+    grid-column: 1/6;
+    width: 500%;
+}
+
+@media only screen and (max-width: 768px) {
+    footer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .flexContainer {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .footerLogo {
+        width: 100%;
+        
+    }
+
+    .connect {
+        text-align: left;
+    }
+
+    .social {
+        width: 100%;
+        margin-left: 25%;
+    }
+
+}
+

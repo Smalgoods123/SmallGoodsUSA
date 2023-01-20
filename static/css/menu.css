@@ -1,0 +1,173 @@
+@font-face{
+    font-family: Avenir;
+    src: url('../fonts/Avenir.ttc');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: #89A593;
+}
+
+ul {
+    list-style: none;
+}
+
+h2 {
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 66px;
+    text-align: center;
+    color: #5E9370;
+}
+
+h3 {
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 44px;
+}
+
+p {
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 36px;
+}
+
+/* Navigation bar */
+#underline {
+    border-bottom: solid #89A593 3px;
+}
+
+header li {
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 33px;
+
+    display: inline-block;
+    padding: 0px 0px;
+    
+    text-shadow: 0px 4.8px 4.8px rgba(0, 0, 0, 0.25);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 11.6%;
+    
+
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.25);
+}
+
+nav img {
+    min-width: 23%;
+}
+
+/* menu content */
+.gridContainer {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 6.8%;
+    margin: 0% 11.8%;
+}
+
+.menuGroup img {
+    width: 100%;
+}
+
+.rewardMeal {
+    width: 11.8%;
+}
+
+.rewardSandwich {
+    width: 11.8%;
+}
+
+
+
+.menuSalad {
+    text-align: center;
+    margin: 0% 27.9%;
+}
+
+.menuDaily {
+    text-align: center;
+}
+
+.menuDaily img {
+    float: left;
+    margin-left: 27%;
+    width: 9.5%;
+}
+
+.menuDrink {
+    text-align: center;
+    margin: 10% 22.3%;
+}
+
+/* Footer */
+footer {
+    
+    margin-top: 3em;
+}
+
+.footerLogo {
+    width: 38.9%;
+    float: left;
+}
+
+/*include linkks and icons*/
+.flexContainer {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+    
+}
+
+.connect {
+    text-align: center;
+}
+
+.connect li {
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+
+}
+
+.social {
+    display: grid;
+    grid-template-columns:repeat(5,2em);
+    
+}
+
+.UberEats {
+    grid-column: 1/6;
+    width: 500%;
+}
