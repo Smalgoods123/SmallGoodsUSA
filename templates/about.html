@@ -8,39 +8,100 @@
   <title>About Us</title>
 </head>
 <body>
-  <h1>About Us</h1>
-  <div class="container">
-    <div class="image">
-      <img src="../static/images/mike&jenny&cash.JPG" alt="Mike, Jenny, & Cash">
+  <header>
+    <h1>About Us</h1>
+  </header>
+  <div class="about-container">
+    <div class="about-item">
+      <div class= "about-image">
+        <img class="about-img-fit" src="../static/images/mike&jenny&cash.JPG" alt="Mike, Jenny, & Cash">
+      </div>
+      <div class="content">
+        <h2>Our story...</h2>
+        <p>
+          Smallgoods American Cheeses & Provisions got its start in the San Diego Farmer's Markets in November, 2015.  In February 2020, just 3 weeks before Covid - we opened our brick-and-mortar shop. Lousy timing!  But we're proud to have made it to the other side.
+        </p>
+      </div>
     </div>
-    <div class="content">
-      <h2>Our story...</h2>
-      <p>
-        Smallgoods American Cheeses & Provisions got its start in the San Diego Farmer's Markets in November, 2015.  In February 2020, just 3 weeks before Covid - we opened our brick-and-mortar shop. Lousy timing!  But we're proud to have made it to the other side.
-      </p>
+    <div class="about-item">
+      <div class="content">
+        <h2>Our shop...</h2>
+        <p>
+          We're our version of a gourmet deli, cafe, caterer and some say we make the best sandwiches and charcuterie platters around. We're a husband and wife team +1 employee that exclusively specializes in American-made regional and seasonal cheeses, cured meats and domestic and local Farmer Market finds.
+        </p>
+      </div>
+      <div class= "about-image">
+        <img class="about-img-fit" src="../static/images/SmallgoodsShop.JPG" alt="SmallGoods Shop">
+      </div>
+    </div>
+    <div class="about-item">
+      <div class= "about-image">
+        <img class="about-img-fit" src="../static/images/IMG_6802.png" alt="Holding up Cheese">
+      </div>
+      <div class="content">
+        <h2>Our makers...</h2>
+        <p>
+          Our American makers are the best-of-the-best and deserve 100% of our commitment and our support - and that's what we've been doing for longer than any other retailer.
+        </p>
+      </div>
     </div>
   </div>
-  <div class="container">
-    <div class="content">
-      <h2>Our shop...</h2>
-      <p>
-        We're our version of a gourmet deli, cafe, caterer and some say we make the best sandwiches and charcuterie platters around. We're a husband and wife team +1 employee that exclusively specializes in American-made regional and seasonal cheeses, cured meats and domestic and local Farmer Market finds.
-      </p>
+  <div class="accolades-header">
+    <h2>Accolades</h2>
+  </div>
+  <div class="accolades-container">
+    <div class="accolade-row">
+      <div class="accolade-image">
+        <img class="accolade-image-fit" src="../static/images/tripadvisor.png" alt="tripadvisor logo">
+      </div>
+      <div class="accolade-image">
+        <img class="accolade-image-fit" src="../static/images/yelp.png" alt="yelp logo">
+      </div>
     </div>
-    <div class="image">
-      <img src="../static/images/SmallgoodsShop.JPG" alt="SmallGoods Shop">
+    <div class="accolade-row">
+      <div class="accolade-label">
+        <p>"Traveler's Choice" Award Ranked #1 in all of San Diego</p>
+      </div>
+      <div class="accolade-label">
+        <p>"Top 5 cheese shops"</p>
+      </div>
+    </div>
+    <div class="accolade-row">
+      <div class="accolade-image">
+        <img class="accolade-image-fit" src="../static/images/villagenews.png" alt="La Jolla Village News Awards">
+      </div>
+      <div class="accolade-image">
+        <img class="accolade-image-fit" src="../static/images/lajollareaders.png" alt="Best of 2020 La Jolla Readers poll">
+      </div>
+    </div>
+    <div class="accolade-row">
+      <div class="accolade-label">
+        <p>Voted Best Sandwich, Best Caterer, Best Soup, & Best Grab n' Go</p>
+      </div>
+      <div class="accolade-label">
+        <p>Voted Best American</p>
+      </div>
     </div>
   </div>
-  <div class="container">
-    <div class="image">
-      <img id="cheese" src="../static/images/IMG_6802.png" alt="Holding up Cheese">
-    </div>
-    <div class="content">
-      <h2>Our makers...</h2>
-      <p>
-        Our American makers are the best-of-the-best and deserve 100% of our commitment and our support - and that's what we've been doing for longer than any other retailer.
-      </p>
+  <div class="cheesemail">
+    <div class="cheesemail-content">
+      <div id="cheesemail-main">
+        <div id="cheesemail-form">
+          <h3>Cheesemail</h3>
+          <p>Sign up with your email to receive our weekly newsletter</p>
+          <form onsubmit="return false;">
+            <div class="cheesemail-input">
+              <input type="email" name="email" id="email" placeholder="Email Address" required>
+              <input type="submit" value="Sign Up" id="signUpBtn">
+            </div>
+          </form>
+        </div>
+        <div id="cheesemail-thanks" class="hidden">
+          <p>Thank for signing up for our newsletter!</p>
+        </div>
+      </div>
     </div>
   </div>
+  <script src="../scripts/about.js"></script>
 </body>
 </html>

@@ -1,58 +1,223 @@
+/* Global Variables */
+:root {
+  font-size: 62.5%;
+  --primary-green: #5E9370;
+  --primary-white: #FFFFFF;
+  --title-font: 64px;
+  --subtitle-font: 48px;
+  --body-font: 26px;
+}
+
 @font-face {
   font-family: 'Avenir';
   src: url('../fonts/Avenir.otf');
 }
 
+/* body */
 html, body {
   font-family: 'Avenir';
   width: 100%;
-  height: 100%;
   margin: 0;
 }
 
 /* Headings and Text */
+header {
+  padding-top: 64px;
+  padding-bottom: 80px;
+}
+
 h1 {
   text-align: center;
-  font-size: 64px;
-  color: #5E9370;
-  margin-top: 64px;
-  margin-bottom: 80px;
+  font-size: var(--title-font);
+  color: var(--primary-green);
 }
 
 h2 {
-  font-size: 48px;
-  color: #5E9370;
+  font-size: var(--subtitle-font);
+  color: var(--primary-green);
+  margin: 0;
+}
+
+h3 {
   margin: 0;
 }
 
 p {
-  font-size: 26px;
+  font-size: var(--body-font);
+  margin: 0;
 }
 
-/* Images */
-img {
+/* About section */
+.about-container {
+  margin: 0 130px;
+}
+
+/* Scales images to fit in about page */
+.about-img-fit {
+  /* vw for responsiveness */
   width: 36vw;
   max-height: 422px;
   object-fit: cover;
+  /* Rounded edges */
   border-radius: 12px;
 }
 
-/* Containers */
-.container {
+/* Container for each row */
+.about-item {
   display: flex;
-  margin: 0 129px 80px;
+  margin-bottom: 80px;
 }
 
-.image:nth-child(odd) {
+/* No margin on the bottom of container */
+.about-item:last-child {
+  margin-bottom: 0px;
+}
+
+/* Right margin for Z pattern */
+.about-image:nth-child(odd) {
   display: flex;
   margin-right: 146px;
 }
 
-.image:nth-child(even) {
+/* Left margin for Z pattern */
+.about-image:nth-child(even) {
   display: flex;
   margin-left: 146px;
 }
 
+/* Stacks heading and text on top of each other */
 .content {
   flex-direction: column;
+}
+
+/* Space between heading and text */
+.content h2 {
+  margin-bottom: 30px;
+}
+
+/* Accolades section */
+.accolades-header {
+  padding-top: 100px;
+  padding-bottom: 70px;
+  text-align: center;
+}
+
+.accolades-container {
+  margin: 0 262px 110px;
+}
+
+.accolade-row {
+  display: grid;
+  grid-template-columns: repeat(12,1fr);
+}
+
+/* Fits image within spanned grid */
+.accolade-image-fit {
+  width: 100%;
+}
+
+.accolade-image {
+  display: flex;
+  flex-direction: column;
+}
+
+.accolade-image:nth-child(odd) {
+  grid-column: 1 / span 5;
+}
+
+.accolade-image:nth-child(even) {
+  grid-column: 8 / span 5;
+  align-self: center;
+}
+
+.accolade-label {
+  padding-top: 50px;
+  padding-bottom: 150px;
+}
+
+.accolade-label p {
+  text-align: center;
+}
+
+.accolade-label:nth-child(odd) {
+  grid-column: 1 / span 5;
+}
+
+.accolade-label:nth-child(even) {
+  grid-column: 8 / span 5;
+}
+
+/* Cheesemail section */
+.cheesemail {
+  background-color: var(--primary-green);
+  color: var(--primary-white);
+}
+
+.cheesemail-content {
+  padding: 65px 0;
+  /* approximate vw from Figma */
+  margin: 0 25vw;
+}
+
+/* h3 styles for section */
+.cheesemail-content h3 {
+  font-size: var(--title-font);
+  text-align: center;
+}
+
+/* Different p styles for section */
+.cheesemail-content p {
+  text-align: center;
+  margin: 35px 0;
+}
+
+/* Places input and button next to each other */
+.cheesemail-input {
+  display: flex;
+  justify-content: center;
+}
+
+/* Styles for email input */
+.cheesemail-input input[type=email] {
+  background-color: var(--primary-white);
+  /* font size of input */
+  font-size: var(--body-font);
+  font-family: 'Avenir';
+  /* -2 height because borders */
+  height: 58px;
+  padding-left: 25px;
+  flex-grow: 2;
+  border: none;
+}
+
+/* Placeholder text styles for opera Browsers */
+.cheesemail-input input::placeholder {
+  font-size: var(--body-font);
+  color: #B6B6B6;
+  font-family: 'Avenir';
+}
+
+/* Placeholder text styles for IE */
+.cheesemail-input input:-ms-input-placeholder {
+  font-size: var(--body-font);
+  color: #B6B6B6;
+  font-family: 'Avenir';
+}
+
+/* Styles for submit button */
+.cheesemail-input input[type=submit] {
+  margin-left: 15px;
+  flex-grow: 2;
+  height: 60px;
+  border: 2px solid var(--primary-white);
+  background-color: var(--primary-green);
+  color: var(--primary-white);
+  font-size: var(--body-font);
+  font-family: 'Avenir';
+  cursor: pointer;
+}
+
+/* Hides after subscribing */
+.hidden {
+  display: none;
 }
