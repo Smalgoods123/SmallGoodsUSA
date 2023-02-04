@@ -1,11 +1,18 @@
 /* Global Variables */
 :root {
+  /* root font size 10px */
   font-size: 62.5%;
   --primary-green: #5E9370;
   --primary-white: #FFFFFF;
-  --title-font: 64px;
-  --subtitle-font: 48px;
-  --body-font: 26px;
+  --title-font: 6.4rem;
+  --subtitle-font: 4.8rem;
+  --body-font: 2.6rem;
+  --title-font-tablet: 4.8rem;
+  --subtitle-font-tablet: 3.4rem;
+  --body-font-tablet: 2rem;
+  --title-font-mobile: 2.8rem;
+  --subtitle-font-mobile: 2.4rem;
+  --body-font-mobile: 1.4rem;
 }
 
 @font-face {
@@ -30,7 +37,7 @@ h1 {
   text-align: center;
   font-size: var(--title-font);
   color: var(--primary-green);
-}
+} 
 
 h2 {
   font-size: var(--subtitle-font);
@@ -54,18 +61,45 @@ p {
 
 /* Scales images to fit in about page */
 .about-img-fit {
-  /* vw for responsiveness */
-  width: 36vw;
-  max-height: 422px;
   object-fit: cover;
+  max-height: 422px;
+  width: 100%;
   /* Rounded edges */
   border-radius: 12px;
 }
 
 /* Container for each row */
 .about-item {
-  display: flex;
+  display: grid;
+  /* vw for responsiveness */
+  grid-template-columns: 38.25vw 146px auto;
   margin-bottom: 80px;
+}
+
+/* layout for z pattern */
+.about-item:nth-child(odd) .about-image {
+  grid-column: 1;
+}
+
+.about-item:nth-child(odd) .content {
+  grid-column: 3;
+}
+
+.about-item:nth-child(even) .about-image {
+  grid-column: 3;
+}
+
+.about-item:nth-child(even) .content {
+  grid-column: 1;
+}
+
+.about-image:nth-child(odd) {
+  grid-row: 1;
+  grid-column: 3;
+}
+
+.about-image:nth-child(even) {
+  grid-column: 1;
 }
 
 /* No margin on the bottom of container */
@@ -73,21 +107,12 @@ p {
   margin-bottom: 0px;
 }
 
-/* Right margin for Z pattern */
-.about-image:nth-child(odd) {
-  display: flex;
-  margin-right: 146px;
+.content:nth-child(even) {
+  grid-column: 3;
 }
 
-/* Left margin for Z pattern */
-.about-image:nth-child(even) {
-  display: flex;
-  margin-left: 146px;
-}
-
-/* Stacks heading and text on top of each other */
-.content {
-  flex-direction: column;
+.content:nth-child(odd) {
+  grid-column-start: 1;
 }
 
 /* Space between heading and text */
@@ -104,11 +129,14 @@ p {
 
 .accolades-container {
   margin: 0 262px 110px;
+
 }
 
 .accolade-row {
   display: grid;
-  grid-template-columns: repeat(12,1fr);
+  grid-template-columns: auto 160px auto;
+  grid-template-rows: auto auto;
+  grid-row-gap: 50px;
 }
 
 /* Fits image within spanned grid */
@@ -119,32 +147,35 @@ p {
 .accolade-image {
   display: flex;
   flex-direction: column;
-}
-
-.accolade-image:nth-child(odd) {
-  grid-column: 1 / span 5;
-}
-
-.accolade-image:nth-child(even) {
-  grid-column: 8 / span 5;
   align-self: center;
 }
 
 .accolade-label {
-  padding-top: 50px;
-  padding-bottom: 150px;
+  margin-bottom: 150px;
+}
+
+.accolade-image:nth-child(1) {
+  grid-row: 1;
+  grid-column: 1;
+}
+
+.accolade-label:nth-child(2) {
+  grid-row: 2;
+  grid-column: 1;
+}
+
+.accolade-image:nth-child(3) {
+  grid-row: 1;
+  grid-column: 3;
+}
+
+.accolade-label:nth-child(4) {
+  grid-row: 2;
+  grid-column: 3;
 }
 
 .accolade-label p {
   text-align: center;
-}
-
-.accolade-label:nth-child(odd) {
-  grid-column: 1 / span 5;
-}
-
-.accolade-label:nth-child(even) {
-  grid-column: 8 / span 5;
 }
 
 /* Cheesemail section */
@@ -190,7 +221,7 @@ p {
   border: none;
 }
 
-/* Placeholder text styles for opera Browsers */
+/* Placeholder text styles */
 .cheesemail-input input::placeholder {
   font-size: var(--body-font);
   color: #B6B6B6;
@@ -220,4 +251,162 @@ p {
 /* Hides after subscribing */
 .hidden {
   display: none;
+}
+
+/* Media query for tablet */
+@media only screen and (max-width: 1024px) {
+  header {
+    padding-top: 40px;
+    padding-bottom: 35px;
+  }
+
+  /* Tablet font sizes */
+  h1 {
+    font-size: var(--title-font-tablet);
+  }
+
+  h2 {
+    font-size: var(--subtitle-font-tablet);
+  }
+
+  p {
+    font-size: var(--body-font-tablet);
+  }
+
+  /* Tablet margins */
+  .about-container {
+    margin: 0 48px;
+  }
+
+  /* About items for tablet */
+  .about-item {
+    grid-template-columns: calc(413px / 1024px) 100px auto;
+    margin-bottom: 55px;
+  }
+
+  .about-img-fit {
+    max-height: 360px;
+  }
+
+  .accolades-header {
+    padding: 60px 0;
+  }
+
+  .accolades-container {
+    margin: 0 134px 35px;
+  }
+
+  .accolade-label {
+    margin-bottom: 40px;
+  }
+
+  /* Cheesemail for tablet */
+  .cheesemail-content {
+    padding: 30px 0 45px 0;
+    margin: 0 25.2vw;
+  }
+
+  .cheesemail-content h3 {
+    font-size: var(--title-font-tablet);
+  }
+
+  .cheesemail-input input[type=email] {
+    height: 43px;
+  }
+
+  .cheesemail-input input::placeholder {
+    font-size: var(--body-font-tablet);
+  }
+
+  .cheesemail-input input[type=submit] {
+    height: 45px;
+    font-size: var(--body-font-tablet);
+    margin-left: 10px;
+  }
+}
+
+/* Media query for mobile */
+@media only screen and (max-width: 600px) {
+  header {
+    padding-top: 35px;
+    padding-bottom: 25px;
+  }
+
+  /* Mobile font sizes */
+  h1 {
+    font-size: var(--title-font-mobile);
+  }
+
+  h2 {
+    font-size: var(--subtitle-font-mobile);
+  }
+
+  p {
+    font-size: var(--body-font-mobile);
+  }
+
+  /* Mobile margins */
+  .about-container {
+    margin: 0 32px;
+  }
+
+  /* About items for mobile */
+  .about-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+
+  .content h2 {
+    margin: 15px 0;
+  }
+
+  .accolades-header {
+    padding: 45px 0;
+  }
+
+  .accolades-container {
+    margin: 0 95px 10px;
+  }
+
+  .accolade-row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .accolade-image {
+    width: 40vw;
+  }
+
+  /* Cheesemail for mobile */
+  .cheesemail-content {
+    padding: 30px 0 45px 0;
+    margin: 0 11.45vw;
+  }
+
+  .cheesemail-content h3 {
+    font-size: var(--title-font-mobile);
+  }
+
+  .cheesemail-input {
+    flex-direction: column;
+  }
+
+  .cheesemail-input input[type=email] {
+    height: 41px;
+    width: 187px;
+    align-self: center;
+  }
+
+  .cheesemail-input input::placeholder {
+    font-size: var(--body-font-mobile);
+  }
+
+  .cheesemail-input input[type=submit] {
+    height: 43px;
+    font-size: var(--body-font-mobile);
+    margin-top: 22px;
+    width: 96px;
+    align-self: center;
+  }
 }
