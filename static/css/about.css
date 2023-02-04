@@ -52,6 +52,7 @@ h3 {
 p {
   font-size: var(--body-font);
   margin: 0;
+  line-height: 36px;
 }
 
 /* About section */
@@ -271,6 +272,7 @@ p {
 
   p {
     font-size: var(--body-font-tablet);
+    line-height: 27px;
   }
 
   /* Tablet margins */
@@ -311,6 +313,7 @@ p {
   }
 
   .cheesemail-input input[type=email] {
+    width: 266px;
     height: 43px;
   }
 
@@ -322,11 +325,12 @@ p {
     height: 45px;
     font-size: var(--body-font-tablet);
     margin-left: 10px;
+    min-width: 142px;
   }
 }
 
 /* Media query for mobile */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
   header {
     padding-top: 35px;
     padding-bottom: 25px;
@@ -343,6 +347,7 @@ p {
 
   p {
     font-size: var(--body-font-mobile);
+    line-height: 19px;
   }
 
   /* Mobile margins */
