@@ -7,41 +7,78 @@
     <title>Document</title>
     <!--link to font-->
     <link rel="stylesheet" href="../static/css/menu.css">
-    <script src="../scripts/menu.js"></script>
+    
 </head>
 <body>
     <!--------NAVBAR--------->
     <header>
-        <nav>
-            <ul class="navLeft">
+        <nav class="navBar">
+            <img class="navImg" src="../static/images/navLogo.png" alt="navLogo">
+
+            <ul class="navHome">
                 <li><a href="../templates/home.html">Home</a></li>
-                
-            </ul>
-
-            <ul><li><a href="../templates/menu.html"><span id="underline">Menu</span></a></li></ul>
-
-            <img src="../static/images/navLogo.png" alt="navLogo">
-
-            <ul><li><a href="#">Catering</a></li></ul>
-
-            <ul>
-                
+                <li><a href="../templates/menu.html"><span id="underline">Menu</span></a></li>
+                <li><a href="#">Catering</a></li>
                 <li><a href="#">About</a></li>
-            </ul>
+            </ul> 
+
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </nav>
     </header>
 
   <!--------HEADER--------->
+  
   <div class="menuHeader">
+    <div class="menuHeaderText">
+        <h1>Our Menu</h1>
+        <p>Shop Hours: 9am - 5~5:30pm
+            <br>Kitchen Hours: 10am - 4pm</p>
+    </div>
+    
+    <img src="../static/images/menuNeigh.png" alt="menuNeigh">
+    
+  </div>
+
+  <div class="menuPlatter">
+    <h2>Personalized Cheese Platter</h2>
+
+    <div class="platterContent">
+        <div class="platterFunction">
+            <button id="vectorL"><img src="../static/images/leftVector.svg" alt="leftVector"></button>
+            <img id="menuChange" src="../static/images/menuCheeseP.png"  alt="menuCheeseP">
+            <button id="vectorR"><img src="../static/images/rightVector.svg" alt="rightVector"></button>
+            
+        </div>
+    
+        <div class="platterText">
+            <h3><span style="color: #5E9370">Cheese only</span> | $12 per person
+                <br><span style="color: #5E9370">Add meat</span> | +$4 per person</h3>
+            <p>Custom made-to-order. As unique as your needs, style & tastes.
+                Call us @ 858 886 7217 for a quick and easy order process. Never be afraid to call us if it's last-minute!</p>
+            
+            <div class="menuBtn">
+                <a href="https://www.ubereats.com/store/smallgoods-cheese-shop-%26-cafe/rpixbJypWOugIMbPzWDvqw"><p>Order Now</p></a>
+            </div>
+        </div>
+    </div>
+    
     
   </div>
 
   <div class="menuContent">
 
     <div class="menuSandwich">
-        <img src="../static/images/rewardMeal.png" class="rewardMeal">
-        <h2>Sandwiches</h2>
-        <img src="../static/images/rewardSandwich.png" class="rewardSandwich">
+        <div class="menuSwHead">
+            <img src="../static/images/rewardMeal.png" class="rewardMeal">
+            <h2>Sandwiches</h2>
+            <img src="../static/images/rewardSandwich.png" class="rewardSandwich">
+        
+        </div>
+        
         <p>Served on Bread Bar Pullman Loaf or Hommage Bakehouse Baguette (+$1) when available</p>
 
         <h3><span style="color: #5E9370">Platter It</span> | +$5</h3>
@@ -55,7 +92,7 @@
     
             <div class="menuGroup">
                 <img src="../static/images/SMALLGOODS_CHEESE & TURKEY 1.png" alt="menu1">
-                <h3><span style="color: #5E9370"></span>California Turkey & Cheese | $12</h3>
+                <h3><span style="color: #5E9370">California Turkey & Cheese</span> | $12</h3>
                 <p>California Swiss + Roasted Turkey + Green Apple + Cucumber + Micro Greens + Smoked Jam + Big Bill's Mustard + Mayo.</p>
             </div>
     
@@ -73,7 +110,7 @@
     
             <div class="menuGroup">
                 <img src="../static/images/SMALLGOODS_HOLEYMOLE 1.png" alt="menu1">
-                <h3> </h3>
+                <h3> <span style="color: #5E9370">Washington Holy Molé</span> | $12</h3>
                 <p>Assortment of American Meats (3) + Alpine Cheese + Arugula + Olive Oil + Big Bill's Mustard + Mayo + Seasonings.</p>
             </div>
     
@@ -85,7 +122,7 @@
     
             <div class="menuGroup">
                 <img src="../static/images/SMALLGOODS NORCAL VEGGIE 1.png" alt="menu1">
-                <h3> </h3>
+                <h3><span style="color: #5E9370">NorCal Veggie</span>  | $12</h3>
                 <p>San Francisco Mortadella + Aged Cheddar + Micro Greens + Red Onion + Apple Butter Jam + Dijon Mustard + Mayo.</p>
             </div>
     
@@ -113,7 +150,7 @@
 
         <div class="gridContainer">
             <div class="menuGroup">
-                <img src="../static/images/BeachBox.png" alt="menu1">
+                <img src="../static/images/BeachBox.png"  alt="menu1">
                 <h3><span style="color: #5E9370">Beach Box</span> | $24</h3>
                 <p>A solid, snack-size offering of farmstead cheeses & meats plus accompaniments for 1-2. 
                     <br>add Paté (when available) | +$4</p>
@@ -148,6 +185,7 @@
     </div>
   </div>
 
+
   <!--Footer-->
   <footer>
     <img class="footerLogo" src="../static/images/footerLogo.png" alt="footerLogo">
@@ -172,27 +210,29 @@
         </div>
 
         <div class="social">
-            <a href="#">
+            <a href="https://www.instagram.com/smallgoods_/?hl=en">
                 <img src="../static/images/instagram.svg" alt="insIcon">
             </a>
 
-            <a href="#">
-                <img src="../static/images/tripadvisor.svg" alt="insIcon">
+            <a href="https://www.tripadvisor.com/Restaurant_Review-g32578-d20815863-Reviews-Smallgoods_Cheese_Shop_Cafe-La_Jolla_San_Diego_California.html">
+                <img src="../static/images/tripadvisor.svg" alt="tripIcon">
             </a>
 
-            <a href="#">
-                <img src="../static/images/yelp.svg" alt="insIcon">
+            <a href="https://www.yelp.com/biz/smallgoods-cheese-shop-and-cafe-la-jolla-3?osq=smallgood">
+                <img src="../static/images/yelp.svg" alt="yelpIcon">
             </a>
 
-            <a href="#">
-                <img src="../static/images/facebook.svg" alt="insIcon">
+            <a href="https://www.facebook.com/smallgoodsUSA">
+                <img src="../static/images/facebook.svg" alt="fbIcon">
             </a>
 
-            <a href="#">
-                <img src="../static/images/twitter.svg" alt="insIcon">
+            <a href="https://twitter.com/SmallgoodsUSA">
+                <img src="../static/images/twitter.svg" alt="twitterIcon">
             </a>
 
-            <a href="#">
+            
+
+            <a href="https://www.ubereats.com/store/smallgoods-cheese-shop-%26-cafe/rpixbJypWOugIMbPzWDvqw">
                 <img src="../static/images/UberEats.svg" class="UberEats">
             </a>
             
@@ -200,5 +240,7 @@
     </div>
 </footer>
     
+<script src="../scripts/menu.js"></script>
+
 </body>
 </html>
