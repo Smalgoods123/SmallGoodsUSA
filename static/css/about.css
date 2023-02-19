@@ -1,0 +1,408 @@
+/* Global Variables */
+:root {
+  /* root font size 10px */
+  font-size: 62.5%;
+  --primary-green: #5E9370;
+  --primary-white: #FFFFFF;
+  --title-font: 6.4rem;
+  --subtitle-font: 4.8rem;
+  --body-font: 2.6rem;
+  --title-font-tablet: 4.8rem;
+  --subtitle-font-tablet: 3.4rem;
+  --body-font-tablet: 2rem;
+  --title-font-mobile: 2.8rem;
+  --subtitle-font-mobile: 2.4rem;
+  --body-font-mobile: 1.4rem;
+}
+
+@font-face {
+  font-family: 'Avenir';
+  src: url('../fonts/Avenir.otf');
+}
+
+/* body */
+html, body {
+  font-family: 'Avenir';
+  width: 100%;
+  margin: 0;
+}
+
+/* Headings and Text */
+h1 {
+  padding-top: 64px;
+  padding-bottom: 80px;
+  text-align: center;
+  font-size: var(--title-font);
+  color: var(--primary-green);
+  margin: 0;
+} 
+
+h2 {
+  font-size: var(--subtitle-font);
+  color: var(--primary-green);
+  margin: 0;
+}
+
+h3 {
+  margin: 0;
+}
+
+p {
+  font-size: var(--body-font);
+  margin: 0;
+  line-height: 36px;
+}
+
+/* About section */
+#about {
+  margin: 0 130px;
+}
+
+/* Scales images to fit in about page */
+.about-img-fit {
+  object-fit: cover;
+  max-height: 422px;
+  width: 100%;
+  /* Rounded edges */
+  border-radius: 12px;
+}
+
+/* Container for each row */
+.about-item {
+  display: grid;
+  /* vw for responsiveness */
+  grid-template-columns: 38.25vw 146px auto;
+  margin-bottom: 80px;
+}
+
+/* layout for z pattern */
+.about-item:nth-child(odd) .about-image {
+  grid-column: 1;
+}
+
+.about-item:nth-child(odd) .content {
+  grid-column: 3;
+}
+
+.about-item:nth-child(even) .about-image {
+  grid-column: 3;
+}
+
+.about-item:nth-child(even) .content {
+  grid-column: 1;
+}
+
+.about-image:nth-child(odd) {
+  grid-row: 1;
+  grid-column: 3;
+}
+
+.about-image:nth-child(even) {
+  grid-column: 1;
+}
+
+/* No margin on the bottom of container */
+.about-item:last-child {
+  margin-bottom: 0px;
+}
+
+.content:nth-child(even) {
+  grid-column: 3;
+}
+
+.content:nth-child(odd) {
+  grid-column-start: 1;
+}
+
+/* Space between heading and text */
+.content h2 {
+  margin-bottom: 30px;
+}
+
+/* Accolades section */
+.accolades-header {
+  padding-top: 100px;
+  padding-bottom: 70px;
+  text-align: center;
+}
+
+#accolades {
+  margin: 0 262px 110px;
+}
+
+.accolade-row {
+  display: grid;
+  grid-template-columns: auto 160px auto;
+  grid-template-rows: auto auto;
+  grid-row-gap: 50px;
+}
+
+/* Fits image within spanned grid */
+.accolade-image-fit {
+  width: 100%;
+}
+
+.accolade-image {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
+.accolade-label {
+  margin-bottom: 150px;
+}
+
+.accolade-image:nth-child(1) {
+  grid-row: 1;
+  grid-column: 1;
+}
+
+.accolade-label:nth-child(2) {
+  grid-row: 2;
+  grid-column: 1;
+}
+
+.accolade-image:nth-child(3) {
+  grid-row: 1;
+  grid-column: 3;
+}
+
+.accolade-label:nth-child(4) {
+  grid-row: 2;
+  grid-column: 3;
+}
+
+.accolade-label p {
+  text-align: center;
+}
+
+/* Cheesemail section */
+#cheesemail {
+  background-color: var(--primary-green);
+  color: var(--primary-white);
+}
+
+.cheesemail-content {
+  padding: 65px 0;
+  /* approximate vw from Figma */
+  margin: 0 25vw;
+}
+
+/* h3 styles for section */
+.cheesemail-content h3 {
+  font-size: var(--title-font);
+  text-align: center;
+}
+
+/* Different p styles for section */
+.cheesemail-content p {
+  text-align: center;
+  margin: 35px 0;
+}
+
+/* Places input and button next to each other */
+.cheesemail-input {
+  display: flex;
+  justify-content: center;
+}
+
+/* Styles for email input */
+.cheesemail-input input[type=email] {
+  background-color: var(--primary-white);
+  /* font size of input */
+  font-size: var(--body-font);
+  font-family: 'Avenir';
+  /* -2 height because borders */
+  height: 58px;
+  padding-left: 25px;
+  flex-grow: 2;
+  border: none;
+}
+
+/* Placeholder text styles */
+.cheesemail-input input::placeholder {
+  font-size: var(--body-font);
+  color: #B6B6B6;
+  font-family: 'Avenir';
+}
+
+/* Placeholder text styles for IE */
+.cheesemail-input input:-ms-input-placeholder {
+  font-size: var(--body-font);
+  color: #B6B6B6;
+  font-family: 'Avenir';
+}
+
+/* Styles for submit button */
+.cheesemail-input button {
+  margin-left: 15px;
+  flex-grow: 2;
+  height: 60px;
+  border: 2px solid var(--primary-white);
+  background-color: var(--primary-green);
+  color: var(--primary-white);
+  font-size: var(--body-font);
+  font-family: 'Avenir';
+  cursor: pointer;
+}
+
+/* Hides after subscribing */
+.hidden {
+  display: none;
+}
+
+/* Media query for tablet */
+@media only screen and (max-width: 1024px) {
+  /* Tablet font sizes */
+  h1 {
+    padding-top: 40px;
+    padding-bottom: 35px;
+    font-size: var(--title-font-tablet);
+  }
+
+  h2 {
+    font-size: var(--subtitle-font-tablet);
+  }
+
+  p {
+    font-size: var(--body-font-tablet);
+    line-height: 27px;
+  }
+
+  /* Tablet margins */
+  #about {
+    margin: 0 48px;
+  }
+
+  /* About items for tablet */
+  .about-item {
+    grid-template-columns: calc(413px / 1024px) 100px auto;
+    margin-bottom: 55px;
+  }
+
+  .about-img-fit {
+    max-height: 360px;
+  }
+
+  .accolades-header {
+    padding: 60px 0;
+  }
+
+  #accolades {
+    margin: 0 134px 35px;
+  }
+
+  .accolade-label {
+    margin-bottom: 40px;
+  }
+
+  /* Cheesemail for tablet */
+  .cheesemail-content {
+    padding: 30px 0 45px 0;
+    margin: 0 25.2vw;
+  }
+
+  .cheesemail-content h3 {
+    font-size: var(--title-font-tablet);
+  }
+
+  .cheesemail-input input[type=email] {
+    width: 266px;
+    height: 43px;
+  }
+
+  .cheesemail-input input::placeholder {
+    font-size: var(--body-font-tablet);
+  }
+
+  .cheesemail-input button {
+    height: 45px;
+    font-size: var(--body-font-tablet);
+    margin-left: 10px;
+    min-width: 142px;
+  }
+}
+
+/* Media query for mobile */
+@media only screen and (max-width: 700px) {  
+  /* Mobile font sizes */
+  h1 {
+    padding-top: 35px;
+    padding-bottom: 25px;
+    font-size: var(--title-font-mobile);
+  }
+
+  h2 {
+    font-size: var(--subtitle-font-mobile);
+  }
+
+  p {
+    font-size: var(--body-font-mobile);
+    line-height: 19px;
+  }
+
+  /* Mobile margins */
+  #about {
+    margin: 0 32px;
+  }
+
+  /* About items for mobile */
+  .about-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+
+  .content h2 {
+    margin: 15px 0;
+  }
+
+  .accolades-header {
+    padding: 45px 0;
+  }
+
+  #accolades {
+    margin: 0 95px 10px;
+  }
+
+  .accolade-row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .accolade-image {
+    width: 40vw;
+  }
+
+  /* Cheesemail for mobile */
+  .cheesemail-content {
+    padding: 30px 0 45px 0;
+    margin: 0 11.45vw;
+  }
+
+  .cheesemail-content h3 {
+    font-size: var(--title-font-mobile);
+  }
+
+  .cheesemail-input {
+    flex-direction: column;
+  }
+
+  .cheesemail-input input[type=email] {
+    height: 41px;
+    width: 187px;
+    align-self: center;
+  }
+
+  .cheesemail-input input::placeholder {
+    font-size: var(--body-font-mobile);
+  }
+
+  .cheesemail-input button {
+    height: 43px;
+    font-size: var(--body-font-mobile);
+    margin-top: 22px;
+    width: 96px;
+    align-self: center;
+  }
+}

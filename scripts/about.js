@@ -1,0 +1,25 @@
+// GLOBAL VARIABLES
+const cheesemailContent = document.querySelector(".cheesemail-content");
+const cheesemailForm = document.querySelector("#cheesemail-form");
+const cheesemailThanks = document.querySelector("#cheesemail-thanks");
+const form = document.getElementById("newsletter");
+
+window.addEventListener("load", function() {
+  form.addEventListener("submit", function(e) {
+    // Prevents window from reloading
+    e.preventDefault();
+    const data = new FormData(form);
+    const action = e.target.action;
+    fetch(action, {
+      method: 'POST',
+      body: data,
+    })
+    .then(() => {
+      // hides subscribe after subbing
+      cheesemailForm.classList.add("hidden");
+      // Keeps cheesemail background same height
+      cheesemailContent.style.padding = '17vh 0';
+      cheesemailThanks.classList.remove("hidden");
+    })
+  });
+});
