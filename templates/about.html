@@ -8,10 +8,8 @@
   <title>About Us</title>
 </head>
 <body>
-  <header>
+  <section id="about">
     <h1>About Us</h1>
-  </header>
-  <div class="about-container">
     <div class="about-item">
       <div class="about-image">
         <img class="about-img-fit" src="../static/images/mike&jenny&cash.JPG" alt="Mike, Jenny, & Cash">
@@ -45,11 +43,9 @@
         </p>
       </div>
     </div>
-  </div>
-  <div class="accolades-header">
-    <h2>Accolades</h2>
-  </div>
-  <div class="accolades-container">
+  </section>
+  <section id="accolades">
+    <h2 class="accolades-header">Accolades</h2>
     <div class="accolade-row">
       <div class="accolade-image">
         <img class="accolade-image-fit" src="../static/images/tripadvisor.png" alt="tripadvisor logo">
@@ -78,26 +74,31 @@
         <p>Voted Best American</p>
       </div>
     </div>
-  </div>
-  <div class="cheesemail">
+  </section>
+  <section id="cheesemail">
     <div class="cheesemail-content">
       <div id="cheesemail-main">
         <div id="cheesemail-form">
           <h3>Cheesemail</h3>
           <p>Sign up with your email to receive our weekly newsletter</p>
-          <form onsubmit="return false;">
+          <!-- Example post email to script -->
+          <form 
+            id="newsletter"
+            method="POST"
+            action="https://script.google.com/macros/s/AKfycbzqG0BLhQc9aa_OoBoCT0QA6L2lYa9_HSaTXYjdpSCegVGuROEYfCuJdRZun6xpoIolLA/exec"
+          >
             <div class="cheesemail-input">
-              <input type="email" name="email" id="email" placeholder="Email Address" required>
-              <input type="submit" value="Sign Up" id="signUpBtn">
+              <input type="email" name="Email" id="Email" placeholder="Email Address" required>
+              <button type="submit" id="signUpBtn">Sign up</button>
             </div>
           </form>
         </div>
         <div id="cheesemail-thanks" class="hidden">
-          <p>Thank for signing up for our newsletter!</p>
+          <p>Thanks for signing up for our newsletter!</p>
         </div>
       </div>
     </div>
-  </div>
+  </section>
   <script src="../scripts/about.js"></script>
 </body>
 </html>
