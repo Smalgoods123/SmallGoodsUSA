@@ -84,6 +84,70 @@ ul {
     list-style: none;
 }
 
+button {
+    cursor: pointer;
+}
+
+#hero {
+    background-image: url('../images/Hero\ for\ Website.png');
+    background-size: 100%;
+    height: 90vh;
+    width: 100%;
+}
+
+#hero > h2 {
+    font-size: 3vw;
+    font-weight: 300;
+    padding-left: 22.3vw;
+    line-height: 60px;
+    padding-right: 32vw;
+    padding-top: 35vh;
+}
+
+#hero > h3 {
+    font-size: 2vw;
+    font-weight: 300;
+    text-align: left;
+    padding-left: 22.3vw;
+    padding-right: 32vw;
+    margin-top: 20px;
+}
+
+.hero-buttons {
+    padding-left: 22.3vw;
+    padding-top: 20px;
+    display: flex;
+}
+
+.menu {
+    border: solid 1px #A6A6A6;
+    border-radius: 8px;
+    height: 65px;
+    width: 173px;
+    background-color: #5E9370;
+    color: white;
+    font-size: 2vw;
+    filter: drop-shadow(0 0 1rem #A6A6A6);
+}
+
+.uber {
+    height: 65px;
+    border: none;
+    border-radius: 8px;
+    border-radius: 0;
+    margin-left: 30px;
+}
+
+.uber > img {
+    max-width: 221px;
+    object-fit: cover;
+    filter: drop-shadow(0 0 1rem #A6A6A6);
+}
+
+.green {
+    color: #5E9370;
+}
+
 /*ALBERT START*/
 .mast{
     display: inline-flex;
@@ -91,7 +155,6 @@ ul {
     color: white;
     justify-content: center;
     align-content: center;
-    height: 100vh;
     width: 100vw;
     box-sizing: border-box;
     transform: scale(0.75);
@@ -197,16 +260,11 @@ ul {
   
   .learnaboutus_section{
     display: flex;
-    flex-wrap: nowrap;
-    color: white;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    width: 100vw;
     box-sizing: border-box;
-    box-shadow: 0px -10px 100px rgba(0, 0, 0, 0.015);
-    transform: scale(0.7);
-    padding-top: -500px;
+    margin: 40px 130px;
+
   }
   
   .aboutus_left{
@@ -217,16 +275,16 @@ ul {
   }
   
   .img6{
-    max-width: 1000%;
-    height: auto;
+    width: 31.3vw;
+    height: 380px;
+    object-fit: cover;
   }
   
   .aboutus_right{
-    flex-basis: 20%;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-left: 120px;
+    padding-left: 7vw;
   }
   
   .text3{
