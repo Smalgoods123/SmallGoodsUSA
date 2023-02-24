@@ -1,0 +1,828 @@
+@font-face{
+    font-family: Avenir;
+    src: url('../fonts/Avenir.ttc');
+}
+
+@font-face {
+    font-family: 'Avenir Next';
+    src: url('fonts/Avenir Next.ttc');
+  }
+  
+@font-face {
+    font-family: 'Avenir Next Condensed';
+    src: url('fonts/Avenir Next Condensed.ttc');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: #89A593;
+}
+
+ul {
+    list-style: none;
+}
+
+h1 {
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 350;
+    font-size: 64px;
+    line-height: 99px;
+    color: #5E9370;
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 66px;
+    color: #5E9370;
+    text-align: center;
+}
+
+h3 {
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 49px;
+    color: #5E9370;
+}
+
+p {
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 36px;
+
+}
+
+@media only screen and (max-width: 1024px) {
+    h1 {
+        font-size: 48px;
+        line-height: 74px;
+    }
+
+    h2 {
+        font-size: 34px;
+        line-height: 46px;
+    }
+
+    h3 {
+        font-size: 24px;
+        line-height: 33px;
+    }
+
+    p {
+        font-size: 20px;
+        line-height: 27px;
+    }
+
+    .adress {
+        font-size: 20px;
+        line-height: 27px;
+    }
+
+    .bold {
+        font-size: 20px;
+        line-height: 27px;
+    }
+
+    
+}
+
+@media only screen and (max-width: 768px) {
+    h1 {
+        font-size: 28px;
+        line-height: 43px;
+    }
+
+    h2 {
+        font-weight: 350;
+        font-size: 24px;
+        line-height: 37px;
+    }
+
+    h3 {
+        font-weight: 800;
+        font-size: 20px;
+        line-height: 27px;
+    }
+
+    p {
+        font-weight: 350;
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .adress {
+        font-size: 14px;
+        line-height: 19px;
+    }
+
+    .bold {
+        font-size: 14px;
+        line-height: 19px;
+
+    }
+}
+
+
+/* Navigation bar */
+header li {
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 33px;
+
+    display: inline-block;
+    padding: 0px 0px;
+    
+    text-shadow: 0px 4.8px 4.8px rgba(0, 0, 0, 0.25);
+}
+
+#underline {
+    border-bottom: solid #89A593 3px;
+}
+
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 24px;
+    
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.25);
+    z-index: 2;
+}
+
+.navHome {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+    
+}
+
+nav img {
+    min-width: 23%;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #5E9370;
+}
+
+@media only screen and (max-width: 768px){
+    .hamburger{
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .navHome {
+        position: fixed;
+        left: -100%;
+        top: 100px;
+        gap: 0;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .navHome>li {
+        margin: 16px 0;
+    }
+
+    .navHome.active {
+        width: 50%;
+        height: 100%;
+        left: 50%;
+        top: 0px;
+
+        justify-content: space-around;
+        align-items: center;
+
+        background-color: #FFFFFF;
+        z-index: 2;
+    }
+
+    .navImg.active {
+        display: block;
+    }
+}
+
+.catering {
+    margin-top: 4%;
+}
+
+.grid {
+    margin-left: 128px;
+    margin-right: 128px;
+    margin-top: 2%;
+    display: grid;
+    grid-template-columns: 50fr 50fr;
+    row-gap: 5%;
+    column-gap: 5%;
+}
+
+.sliding {
+    display: grid;
+    grid-template-columns: 45fr 45fr 10fr;
+
+    grid-column: 1/3;
+    grid-row: 1/2;
+
+    
+    z-index: 0;
+}
+
+.cater1{
+    width: 100%;
+    grid-column: 1/2;
+    
+}
+
+.cater2{
+    width: 100%
+}
+
+.cater3 {
+    width: 450%;
+}
+
+.sliding.active {
+    display: grid;
+    grid-template-columns: 10fr 45fr 45fr;
+}
+.cater1.active {
+    width: 450%;
+}
+.cater3.active {
+    width: 100%;
+}
+
+
+.side-crop1.active { overflow: hidden; text-indent: -350% }
+
+.side-crop { overflow: hidden; }
+
+#caterVectorL {
+    grid-column: 1/3;
+    grid-row: 1/2;
+    z-index: 1;
+    margin-top: 12%;
+    margin-left:0.8%;
+    width: 2.7%;
+}
+
+#caterVectorR {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    float:right;
+    z-index: 1;
+    margin-top: 24%;
+    margin-left: 93%;
+    width: 5.4%;
+}
+
+.whatdo {
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+.whatfor {
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+.whatdo h3 {
+    
+    margin-bottom: 3%;
+}
+
+.whatfor h3 {
+    
+    margin-bottom: 3%;
+}
+
+.container {
+    display: none;
+}
+
+@media only screen and (max-width: 1024px) {
+    .grid {
+        margin-left: 48px;
+        margin-right: 48px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .grid {
+        margin-left: 32px;
+        margin-right: 32px;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    #caterVectorL {
+        
+        z-index: 1;
+        margin-top: 12%;
+        margin-left:0.8%;
+        width: 4%;
+    }
+    
+    #caterVectorR {
+        
+        float:right;
+        z-index: 1;
+        margin-top: 0%;
+        margin-left: 93%;
+        width: 4%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+        display: flex;
+    }
+
+    .carousel {
+        
+        /*border-radius: 12px;*/
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .slider{
+        
+        display: flex;
+        width: 300%;
+        
+        /*transform: translate(-33.33%);*/
+        z-index: 0;
+        transition: all 0.3s;
+    }
+
+    .slider img {
+        width: 100%;
+        z-index: 0;
+        border-radius: 12px;
+    }
+
+    .slider section {
+        flex-basis: 100%;
+        display: flex;
+        justify-content:center;
+        align-items: center;
+    }
+
+    .controls {
+        z-index: 1;
+    }
+
+    .controls .arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .controls .arrow img {
+        width: 45%;
+    }
+
+    .arrow.left {
+        left: 5%;
+    }
+
+    .arrow.right {
+        right: 0%;
+    }
+
+    .sliding {
+        display: none;
+    }
+
+    #caterVectorL, #caterVectorR {
+        display: none;
+    }
+
+    .cater1, .cater2, .cater3 {
+        display: none;
+    }
+
+    .whatdo h3 {
+        margin-top: 7%;
+        margin-bottom: 3%;
+    }
+
+    .whatfor h3 {
+        margin-top: 7%;
+        margin-bottom: 3%;
+    }
+}
+
+.types {
+    margin-left: 128px;
+    margin-right: 128px;
+    margin-top: 5%;
+    
+}
+
+.types h3 {
+    text-align: center;
+}
+
+.adress {
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 350;
+    font-size: 26px;
+    line-height: 40px;
+}
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: 50fr 50fr;
+    gap: 5.9%;
+
+    margin-top: 3%;
+}
+
+.yourplace {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    width: 100%;
+    margin-top: 5%;
+}
+.x {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+.tt {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+.y {
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+.tt2 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+.ourplace {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    width: 100%;
+    margin-top: 15%;
+}
+
+.btn p {
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+.btn {
+    background: #5E9370;
+    border: 1px solid #A6A6A6;
+
+    box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+
+    padding: 8px 40px;
+    gap: 10px;
+    width: 50%;
+    margin-left: 22%;
+    margin-top: 3%;
+}
+
+@media only screen and (max-width: 1024px) {
+    .types {
+        margin-left: 48px;
+        margin-right: 48px;
+    }
+ 
+    .btn p {
+        font-weight: 350;
+        font-size: 20px;
+        line-height: 31px;
+    }
+
+    .btn {
+        width: 60%;
+        margin-left: 18%;
+    }
+
+    .adress {
+        font-size: 20px;
+        line-height: 27px;
+    }
+
+    .hide {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .types {
+        margin-left: 32px;
+        margin-right: 32px;
+    }
+
+    .btn p {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 19px;
+    }
+
+    .btn {
+        width: 42.5%;
+        margin-left: 28%;
+    }
+
+    .gridContainer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .adress {
+        font-size: 14px;
+        line-height: 19px;
+    }
+
+    .ourplace {
+        margin-top: 5%;
+    }
+
+    .hide {
+        display: none;
+    }
+
+    .hide1 {
+        display: none;
+    }
+
+    .y {
+        margin-top: 4%;
+        text-justify: left;
+        
+    }
+}
+
+.process {
+    margin: 128px;
+    margin-bottom: 10%;
+}
+
+.process img {
+    margin-top: 24px;
+}
+
+.pgrid {
+    display: grid;
+    grid-template-columns: 37fr 63fr;
+    grid-template-rows: 80fr 20fr;
+    column-gap: 9%;
+}
+
+.pgrid img {
+    grid-column: 1/2;
+    grid-row: 1/3;
+    width: 100%;
+}
+.processContent {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    margin-top: 12%;
+}
+
+.green {
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+/*.processContent {
+    -ms-transform: translateY(12%);
+    transform: translateY(12%);
+}*/
+
+.bold {
+    font-family: 'Avenir';
+    font-style: italic;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 36px;
+}
+
+@media only screen and (max-width: 1024px) {
+    .process {
+        margin: 48px;
+        margin-top: 13%;
+        margin-bottom: 8%;
+    }
+
+    .pgrid {
+        grid-template-columns: 39fr 61fr;
+        grid-template-rows: 80fr 20fr;
+        column-gap: 7%;
+    }
+
+    .bold {
+        font-size: 20px;
+        line-height: 27px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .pgrid {
+        display: grid;
+        grid-template-columns: 59.36fr 40.64fr;
+        grid-template-rows: 40fr 60fr;
+        column-gap: 3%;
+    }
+
+    .process {
+        margin: 48px;
+        margin-top: 13%;
+        margin-bottom: 0%;
+    }
+
+    .pgrid img {
+        grid-column: 1/2;
+        grid-row: 2/3;
+        width: 100%;
+        margin-top: 0px;
+    }
+
+    .processContent {
+        grid-column: 1/3;
+        grid-row: 1/2;
+        margin-top: 0%;
+    }
+    
+    .green {
+        grid-column: 2/3;
+        grid-row: 2/3;
+        padding-top: 60%;
+    }
+
+    .bold {
+        font-size: 14px;
+        line-height: 19px;
+
+    }
+}
+
+.faq {
+    padding-left: 128px;
+    padding-right: 128px;
+    padding-bottom: 20px;
+}
+
+.q {
+    color: #5E9370;
+}
+
+@media only screen and (max-width: 1024px) {
+    .faq {
+        padding-left: 48px;
+        padding-right: 48px;
+        padding-bottom: 20px;
+    }
+}
+
+/*footer section*/
+footer {
+    margin-top: 3em;
+    margin-left: 7.4%;
+    margin-right: 7.4%;
+}
+
+.footerLogo {
+    width: 38.9%;
+    float: left;
+    
+}
+
+/*include linkks and icons*/
+.flexContainer {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+    
+}
+
+
+
+.connect {
+    text-align: center;
+}
+
+.connect li {
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+
+}
+
+.links {
+
+}
+
+.social {
+    display: grid;
+    grid-template-columns:repeat(5,2em);
+    
+}
+
+.UberEats {
+    grid-column: 1/6;
+    width: 500%;
+}
+
+
+@media only screen and (max-width: 768px) {
+    footer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .flexContainer {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .flexContainer li, .connect li, .connect h4, .social {
+        margin-top: 10px;
+    }
+    
+    .footerLogo {
+        width: 100%;
+        
+    }
+
+    .connect {
+        text-align: left;
+    }
+
+    .social {
+        width: 100%;
+        margin-left: 20%;
+        display: grid;
+        gap: 30px;
+    }
+
+    .UberEats {
+        width: 500%;
+        margin-left: 200%;
+    }
+
+}
