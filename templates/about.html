@@ -8,6 +8,27 @@
   <title>About Us</title>
 </head>
 <body>
+  <!--------NAVBAR--------->
+  <header>
+    <nav class="navBar">
+        <img class="navImg" src="../static/images/navLogo.png" alt="navLogo">
+
+        <ul class="navHome">
+            <li><a href="../templates/home.html">Home</a></li>
+            <li><a href="../templates/menu.html">Menu</a></li>
+            <li><a href="../templates/catering.html">Catering</a></li>
+            <li><a href="../templates/about.html"><span id="underline">About</span></a></li>
+        </ul> 
+
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+  </header>
+
+  <!--About(Kelvin)-->
   <section id="about">
     <h1>About Us</h1>
     <div class="about-item">
@@ -99,6 +120,61 @@
       </div>
     </div>
   </section>
+
+  <!--Footer-->
+  <footer>
+    <img class="footerLogo" src="../static/images/footerLogo.png" alt="footerLogo">
+
+    <div class="flexContainer">
+        <div class="links">
+            <ul>
+              <li><a href="../templates/home.html#whereToFindUs"><h4>Hours</h4></a></li>
+              <li><a href="../templates/home.html#whereToFindUs"><h4>Locations</h4></a></li>
+            </ul>
+            
+        </div>
+
+        <div class="connect">
+            <h4>Connect With Us</h4>
+
+            <ul>
+                <li><a href="#">(858) 886-7217</a></li>
+                <li><a href="mailto:info@smallgoodsusa.com">info@smallgoodsusa.com</a></li>
+                <li><a href="#cheesemail">Newsletter</a></li>
+            </ul>
+        </div>
+
+        <div class="social">
+            <a href="https://www.instagram.com/smallgoods_/?hl=en">
+                <img src="../static/images/instagram.svg" alt="insIcon">
+            </a>
+
+            <a href="https://www.tripadvisor.com/Restaurant_Review-g32578-d20815863-Reviews-Smallgoods_Cheese_Shop_Cafe-La_Jolla_San_Diego_California.html">
+                <img src="../static/images/tripadvisor.svg" alt="tripIcon">
+            </a>
+
+            <a href="https://www.yelp.com/biz/smallgoods-cheese-shop-and-cafe-la-jolla-3?osq=smallgood">
+                <img src="../static/images/yelp.svg" alt="yelpIcon">
+            </a>
+
+            <a href="https://www.facebook.com/smallgoodsUSA">
+                <img src="../static/images/facebook.svg" alt="fbIcon">
+            </a>
+
+            <a href="https://twitter.com/SmallgoodsUSA">
+                <img src="../static/images/twitter.svg" alt="twitterIcon">
+            </a>
+
+            
+
+            <a href="https://www.ubereats.com/store/smallgoods-cheese-shop-%26-cafe/rpixbJypWOugIMbPzWDvqw">
+                <img src="../static/images/UberEats.svg" class="UberEats">
+            </a>
+            
+        </div>
+    </div>
+</footer>
+
   <script src="../scripts/about.js"></script>
 </body>
 </html>

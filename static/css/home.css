@@ -305,7 +305,7 @@ button {
   
 /*ALBERT END*/
 
-/*Navigation bar*/
+/* Navigation bar */
 header li {
     font-family: 'Avenir';
     font-style: normal;
@@ -323,15 +323,22 @@ header li {
     border-bottom: solid #89A593 3px;
 }
 
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 24px;
+    
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.25);
+    z-index: 2;
+}
+
 .navHome {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 11.6%;
+    gap: 60px;
     
-    
-
-    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.25);
 }
 
 nav img {
@@ -341,6 +348,7 @@ nav img {
 .hamburger {
     display: none;
     cursor: pointer;
+    z-index: 2;
 }
 
 .bar {
@@ -368,18 +376,6 @@ nav img {
         transform: translateY(-8px) rotate(-45deg);
     }
 
-    .navMenu {
-        position: fixed;
-        left: -100%;
-        top: 70px;
-        gap: 0;
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
-    }
-
-    
-
     .navHome {
         position: fixed;
         left: -100%;
@@ -390,17 +386,21 @@ nav img {
         text-align: center;
     }
 
-    
-
-    .navBar>li {
+    .navHome>li {
         margin: 16px 0;
     }
 
     .navHome.active {
-        width: 214px;
+        width: 50%;
         height: 100%;
-        left: 75%;
+        left: 50%;
         top: 0px;
+
+        justify-content: space-around;
+        align-items: center;
+
+        background-color: #FFFFFF;
+        z-index: 2;
     }
 
     .navImg.active {
@@ -412,7 +412,7 @@ nav img {
 
 
 /*where to find us section*/
-.whereToFindUs {
+#whereToFindUs {
     
     /*margin-left: 7.5%;*/
     margin: 128px;
@@ -558,13 +558,15 @@ nav img {
 
 /*footer section*/
 footer {
-    
     margin-top: 3em;
+    margin-left: 7.4%;
+    margin-right: 7.4%;
 }
 
 .footerLogo {
     width: 38.9%;
     float: left;
+    
 }
 
 /*include linkks and icons*/
@@ -605,6 +607,27 @@ footer {
     width: 500%;
 }
 
+@media only screen and (max-width: 1024px) {
+    h4 {
+        font-family: 'Avenir';
+        font-style: normal;
+        font-weight: 900;
+        font-size: 14.2222px;
+        line-height: 19px;
+
+    }
+
+    .connect li {
+        font-family: 'Avenir';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 11.8519px;
+        line-height: 16px;
+    
+    }
+}
+
+
 @media only screen and (max-width: 768px) {
     footer {
         display: flex;
@@ -614,6 +637,11 @@ footer {
     .flexContainer {
         display: flex;
         flex-direction: column;
+    }
+
+
+    .flexContainer li, .connect li, .connect h4, .social {
+        margin-top: 10px;
     }
     
     .footerLogo {
@@ -627,8 +655,31 @@ footer {
 
     .social {
         width: 100%;
-        margin-left: 25%;
+        margin-left: 20%;
+        display: grid;
+        gap: 30px;
+    }
+
+    .UberEats {
+        width: 500%;
+        margin-left: 200%;
+    }
+
+    h4 {
+        font-family: 'Avenir';
+        font-style: normal;
+        font-weight: 900;
+        font-size: 24px;
+        line-height: 33px;
+    }
+
+    .connect li {
+        font-family: 'Avenir';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 27px;
+    
     }
 
 }
-

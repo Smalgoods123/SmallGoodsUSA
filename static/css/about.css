@@ -20,6 +20,16 @@
   src: url('../fonts/Avenir.otf');
 }
 
+@font-face {
+  font-family: 'Avenir Next';
+  src: url('fonts/Avenir Next.ttc');
+}
+
+@font-face {
+  font-family: 'Avenir Next Condensed';
+  src: url('fonts/Avenir Next Condensed.ttc');
+}
+
 /* body */
 html, body {
   font-family: 'Avenir';
@@ -47,10 +57,138 @@ h3 {
   margin: 0;
 }
 
+h4 {
+  font-family: 'Avenir';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 33px;
+}
+
 p {
   font-size: var(--body-font);
   margin: 0;
   line-height: 36px;
+}
+
+/* Navigation bar */
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: #89A593;
+}
+
+ul {
+  list-style: none;
+}
+
+header li {
+  font-family: 'Avenir';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 33px;
+
+  display: inline-block;
+  padding: 0px 0px;
+  
+  text-shadow: 0px 4.8px 4.8px rgba(0, 0, 0, 0.25);
+}
+
+#underline {
+  border-bottom: solid #89A593 3px;
+}
+
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 24px;
+  
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.25);
+  z-index: 2;
+}
+
+.navHome {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+  
+}
+
+nav img {
+  min-width: 23%;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: #5E9370;
+}
+
+@media only screen and (max-width: 768px){
+  .hamburger{
+      display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+      opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .navHome {
+      position: fixed;
+      left: -100%;
+      top: 100px;
+      gap: 0;
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+      
+  }
+
+  .navHome>li {
+      margin: 16px 0;
+      transform: translate(-20%);
+      text-align: center;
+  }
+
+  .navHome.active {
+      width: 40%;
+      height: 100%;
+      left: 50%;
+      top: 0px;
+      
+      justify-content: space-around;
+      align-items: center;
+      
+
+      background-color: #FFFFFF;
+      z-index: 2;
+  }
+
+  .navImg.active {
+      display: block;
+  }
 }
 
 /* About section */
@@ -324,7 +462,7 @@ p {
 }
 
 /* Media query for mobile */
-@media only screen and (max-width: 700px) {  
+@media only screen and (max-width: 768px) {  
   /* Mobile font sizes */
   h1 {
     padding-top: 35px;
@@ -405,4 +543,141 @@ p {
     width: 96px;
     align-self: center;
   }
+}
+
+/*footer section*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+footer {
+  margin-top: 3em;
+  margin-left: 7.4%;
+  margin-right: 7.4%;
+}
+
+.footerLogo {
+  width: 38.9%;
+  float: left;
+  
+}
+
+/*include linkks and icons*/
+.flexContainer {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+  
+}
+
+
+
+.connect {
+  text-align: center;
+}
+
+.connect li {
+  font-family: 'Avenir';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 27px;
+
+}
+
+.links {
+
+}
+
+.social {
+  display: grid;
+  grid-template-columns:repeat(5,3em);
+  
+}
+
+.UberEats {
+  grid-column: 1/6;
+  width: 500%;
+}
+
+@media only screen and (max-width: 1024px) {
+  h4 {
+      font-family: 'Avenir';
+      font-style: normal;
+      font-weight: 900;
+      font-size: 14.2222px;
+      line-height: 19px;
+
+  }
+
+  .connect li {
+      font-family: 'Avenir';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 11.8519px;
+      line-height: 16px;
+  
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+  footer {
+      display: flex;
+      flex-direction: column;
+  }
+
+  .flexContainer {
+      display: flex;
+      flex-direction: column;
+  }
+
+
+  .flexContainer li, .connect li, .connect h4, .social {
+      margin-top: 10px;
+  }
+  
+  .footerLogo {
+      width: 100%;
+      
+  }
+
+  .connect {
+      text-align: left;
+  }
+
+  .social {
+      width: 100%;
+      margin-left: 20%;
+      display: grid;
+      gap: 30px;
+  }
+
+  .UberEats {
+      width: 500%;
+      margin-left: 200%;
+  }
+
+  h4 {
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 33px;
+}
+
+.connect li {
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+
+}
+
 }

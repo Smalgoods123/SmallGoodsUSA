@@ -64,6 +64,14 @@ h3 {
     color: #5E9370;
 }
 
+h4 {
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 33px;
+}
+
 p {
     font-family: 'Avenir';
     font-style: normal;
@@ -787,6 +795,25 @@ footer {
     width: 500%;
 }
 
+@media only screen and (max-width: 1024px) {
+    h4 {
+        font-family: 'Avenir';
+        font-style: normal;
+        font-weight: 900;
+        font-size: 14.2222px;
+        line-height: 19px;
+
+    }
+
+    .connect li {
+        font-family: 'Avenir';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 11.8519px;
+        line-height: 16px;
+    
+    }
+}
 
 @media only screen and (max-width: 768px) {
     footer {
@@ -823,6 +850,23 @@ footer {
     .UberEats {
         width: 500%;
         margin-left: 200%;
+    }
+
+    h4 {
+        font-family: 'Avenir';
+        font-style: normal;
+        font-weight: 900;
+        font-size: 24px;
+        line-height: 33px;
+    }
+
+    .connect li {
+        font-family: 'Avenir';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 27px;
+    
     }
 
 }
