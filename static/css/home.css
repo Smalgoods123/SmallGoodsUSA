@@ -90,8 +90,9 @@ button {
 
 #hero {
     background-image: url('../images/Hero\ for\ Website.png');
-    background-size: 100%;
-    height: 90vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 47.5vw;
     width: 100%;
 }
 
@@ -101,7 +102,7 @@ button {
     padding-left: 22.3vw;
     line-height: 60px;
     padding-right: 32vw;
-    padding-top: 35vh;
+    padding-top: 19.25vw;
 }
 
 #hero > h3 {
@@ -117,6 +118,7 @@ button {
     padding-left: 22.3vw;
     padding-top: 20px;
     display: flex;
+    gap: 30px;
 }
 
 .menu {
@@ -135,7 +137,6 @@ button {
     border: none;
     border-radius: 8px;
     border-radius: 0;
-    margin-left: 30px;
 }
 
 .uber > img {
@@ -264,7 +265,6 @@ button {
     align-items: center;
     box-sizing: border-box;
     margin: 40px 130px;
-
   }
   
   .aboutus_left{
@@ -281,9 +281,8 @@ button {
   }
   
   .aboutus_right{
+    display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     padding-left: 7vw;
   }
   
@@ -294,11 +293,11 @@ button {
   }
   
   .button3{
+    display: flex;
     justify-content: center;
     align-items: center;
     height: 80px;
     padding-top: 10px;
-    padding-left: 80px;
   }
   
   /* END OF HOME PAGE */
@@ -617,6 +616,45 @@ footer {
 
     }
 
+    #hero > h2 {
+        line-height: 41px;
+    }
+
+    #hero > h3 {
+        margin-top: 10px;
+    }
+
+    .menu {
+        width: 104px;
+        height: 39px;
+    }
+
+    .hero-buttons {
+        padding-top: 10px;
+        gap: 15px;
+    }
+
+    .uber {
+        height: 39px;
+    }
+
+    .uber img {
+        width: 132px;
+    }
+
+    .learnaboutus_section {
+        margin: 88px 48px;
+    }
+
+    .aboutus_right > p {
+        font-size: 20px;
+    }
+
+    .button3 {
+        height: 70px;
+        padding-top: 10px;
+    }
+
     .connect li {
         font-family: 'Avenir';
         font-style: normal;
@@ -632,6 +670,62 @@ footer {
     footer {
         display: flex;
         flex-direction: column;
+    }
+
+    #hero {
+        background-image: url('../images/hero_for_mobile.png');
+        background-size: cover;
+        height: 103vw;
+    }
+    
+    #hero > h2 {
+        line-height: 6.3vw;
+        padding-left: 17.76vw;
+        padding-top: 30.6vw;
+        padding-right: 4vw;
+        font-size: 4vw;
+    }
+
+    #hero > h3 {
+        padding-left: 17.76vw;
+        font-size: 3vw;
+        margin-top: 13px;
+    }
+
+    .hero-buttons {
+        padding-left: 17.76vw;
+    }
+
+    .menu {
+        width: 18.7vw;
+        height: 7vw;
+        font-size: 3vw;
+    }
+
+    .uber {
+        height: 7vw;
+    }
+
+    .uber img {
+        height: 7vw;
+        width: 100%;
+    }
+
+    .learnaboutus_section {
+        flex-direction: column;
+        margin: 40px;
+    }
+
+    .img6 {
+        width: 100%;
+    }
+
+    .aboutus_right {
+        padding: 20px 12px 25px;
+    }
+
+    .button3 {
+        height: 60px;
     }
 
     .flexContainer {
