@@ -249,7 +249,7 @@ nav img {
 .menuHeaderText {
     display: block;
     
-    margin-left: 36%;
+    margin-left: 41.5%;
     margin-right: auto;
 
     text-align: center;
@@ -412,16 +412,19 @@ nav img {
 
 .rewardMeal {
     width: 11.8%;
+    
 }
 
 .rewardSandwich {
     width: 7.16%;
+    
 }
 
 .menuSwHead {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin-right: 3%;
 
 }
 
@@ -439,17 +442,19 @@ nav img {
 
 .menuDaily {
     margin-top: 5%;
+    margin-bottom: 15%;
 }
 
 .menuDaily h2 {
     text-align:center;
-    transform: translateX(-18%);
+    transform: translateX(-18.5%);
 }
 
 .menuDaily img {
     float: left;
     margin-left: 27%;
     width: 9.5%;
+    
 }
 
 @media only screen and (max-width: 768px) {
@@ -473,7 +478,7 @@ nav img {
 /*footer section*/
 footer {
     margin-top: 3em;
-    margin-left: 7.4%;
+    
     margin-right: 7.4%;
 }
 
